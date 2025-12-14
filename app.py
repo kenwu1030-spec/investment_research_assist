@@ -30,6 +30,8 @@ def load_sentiment_model():
     tokenizer = AutoTokenizer.from_pretrained("kenwuhj/CustomModel_ZA_sentiment")
     model = AutoModelForSequenceClassification.from_pretrained("kenwuhj/CustomModel_ZA_sentiment")
     return tokenizer, model
+    model, tokenizer = load_model() # Use cached model
+
 
 # Function: Enhanced Text Summarization from URL
 def text_summarization(url, summarizer):
